@@ -11,7 +11,6 @@ configs = { // enter your configs
 }
 
 let conString = `pg://${configs.user}:${configs.password}@${configs.host}:${configs.port}/${configs.dbName}?debug=${configs.debug}`;
-console.log('conString', conString)
 
 let client = new pg.Client(conString);
 
