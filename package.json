@@ -1,0 +1,19 @@
+{
+  "name": "simple-burndown-app",
+  "version": "0.1.0",
+  "description": "A utility app for tracking the burndown of funding on a project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trycrmr/simple-burndown-app.git"
+  },
+  "author": "trycrmr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trycrmr/simple-burndown-app/issues"
+  },
+  "homepage": "https://github.com/trycrmr/simple-burndown-app#readme"
+}
