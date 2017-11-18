@@ -7,12 +7,14 @@ configs = { // enter your configs
   port: '',
   dbName: '',
   password: '',
-  debug: 
+  debug: true
 }
 
-let conString = `pg://${configs.user}${config.password ? `: ${config.password} : /* return nothing */`}@${configs.host}:${configs.port}/${configs.dbName}${config.debug ? `?debug=${config.debug} : /* return nothing */`}`;
+let conString = `pg://${configs.user}:${configs.password}@${configs.host}:${configs.port}/${configs.dbName}?debug=${configs.debug}`;
+console.log('conString', conString)
 
 let client = new pg.Client(conString);
-await client.connect();
 
-export client;
+client.connect();
+
+module.exports = client;
