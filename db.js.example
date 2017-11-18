@@ -1,4 +1,4 @@
-import pg from 'pg';
+let pg = require('pg');
 
 configs = { // enter your configs
   role: '',
