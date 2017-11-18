@@ -1,0 +1,18 @@
+import pg from 'pg';
+
+configs = { // enter your configs
+  role: '',
+  user: '',
+  host: '',
+  port: '',
+  dbName: '',
+  password: '',
+  debug: 
+}
+
+let conString = `pg://${configs.user}${config.password ? `: ${config.password} : /* return nothing */`}@${configs.host}:${configs.port}/${configs.dbName}${config.debug ? `?debug=${config.debug} : /* return nothing */`}`;
+
+let client = new pg.Client(conString);
+await client.connect();
+
+export client;
