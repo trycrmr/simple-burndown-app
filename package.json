@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/trycrmr/simple-burndown-app/issues"
   },
-  "homepage": "https://github.com/trycrmr/simple-burndown-app#readme"
+  "homepage": "https://github.com/trycrmr/simple-burndown-app#readme",
+  "dependencies": {
+    "pg": "^7.4.0"
+  }
 }
