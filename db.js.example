@@ -1,0 +1,19 @@
+let pg = require('pg');
+
+configs = { // enter your configs
+  role: '',
+  user: '',
+  host: '',
+  port: '',
+  dbName: '',
+  password: '',
+  debug: true
+}
+
+let conString = `pg://${configs.user}:${configs.password}@${configs.host}:${configs.port}/${configs.dbName}?debug=${configs.debug}`;
+
+let client = new pg.Client(conString);
+
+client.connect();
+
+module.exports = client;
