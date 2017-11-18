@@ -1,9 +1,6 @@
-let db = require('./config/db')
+let express = require('express')
+let app = express()
 
-db.query('select * from persons')
-.then(result => {
-  console.log('result', result)  
-})
-.catch(err => {
-  console.log('err', err)
-});
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
