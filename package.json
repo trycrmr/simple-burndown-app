@@ -2,7 +2,7 @@
   "name": "simple-burndown-app",
   "version": "0.1.0",
   "description": "A utility app for tracking the burndown of funding on a project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "test"
   },
