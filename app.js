@@ -1,11 +1,15 @@
 let express = require('express')
 let app = express()
+let path = require('path');
+let ejs = require('ejs');
+
+let viewPath = path.join(__dirname, '/views');
+// app.set('views', viewPath);
+// app.use(express.static(path.join(__dirname, '/public')));
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-  var ejs = require('ejs'),
-    people = ['geddy', 'neil', 'alex'],
-    html = ejs.render('<%= people.join(", "); %>', {people: people});
-  res.send(html)
+  res.render('home', {foo: 'foo'});
 })
 
 app.listen(3000, () => console.log('Simple Burndown App listening on port 3000!'))
