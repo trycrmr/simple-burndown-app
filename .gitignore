@@ -58,3 +58,4 @@ typings/
 .env
 
 config/db.js
+public/dist/
