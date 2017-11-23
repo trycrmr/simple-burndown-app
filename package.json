@@ -4,7 +4,9 @@
   "description": "A utility app for tracking the burndown of funding on a project",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "watch-client": "webpack --watch",
+    "watch-server": "nodemon -e js,ejs"
   },
   "repository": {
     "type": "git",
