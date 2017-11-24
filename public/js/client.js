@@ -17,7 +17,11 @@ $(document).ready(function() {
       }
     },
     columns: [
-      { data: "id" }
+      { data: "date" },
+      { data: "time" },
+      { data: "project" },
+      { data: "person" },
+      { data: "type" }
     ]
   });
 
