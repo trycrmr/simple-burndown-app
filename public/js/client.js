@@ -3,5 +3,22 @@ var dt = require( 'datatables.net' );
 $.DataTable = dt;
 
 $(document).ready(function() {
-  $('#datatable').DataTable();
-} );
+  
+  $('#datatable').DataTable({
+    dom: "Bflrtip",
+    responsive: true,
+    ajax: {
+      url: "/data",
+      dataSrc: function(json) {
+        if (!json) {
+          json = [];
+        }
+        return json;
+      }
+    },
+    columns: [
+      { data: "id" }
+    ]
+  });
+
+});

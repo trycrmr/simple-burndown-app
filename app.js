@@ -13,4 +13,11 @@ app.get('/', (req, res) => {
   res.render('home', {foo: 'foo'});
 })
 
+app.get('/data', (req, res) => {
+  res.send([
+    {id: 'terry'},
+    {id: 'justin'}
+  ]);
+})
+
 app.listen(3000, () => console.log('Simple Burndown App listening on port 3000!'))
