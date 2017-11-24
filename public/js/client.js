@@ -1,3 +1,7 @@
-let string = require('./string');
+var $ = require('jquery');
+var dt = require( 'datatables.net' );
+$.DataTable = dt;
 
-console.log('string', string);
+$(document).ready(function() {
+  $('#datatable').DataTable();
+} );
