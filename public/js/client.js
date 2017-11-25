@@ -22,7 +22,21 @@ $(document).ready(function() {
       { data: "time" },
       { data: "project" },
       { data: "person" },
-      { data: "type" }
+      { data: "type" },
+      { data: "Delete" },
+      ],
+    "columnDefs": [
+      {
+        "defaultContent": "-",
+        "className": "dt-center",
+        "targets": "_all"
+      },
+      {
+        render: function ( data, type, row ) {
+            return `<button id='#deleteThisRow'>Delete</button>`;
+        },
+        targets: 5
+      }
     ]
   });
 
@@ -35,6 +49,12 @@ $(document).ready(function() {
     console.log('titleText', titleText);
     console.log(`${titleText}: ${cellData}`);
   } );
+
+  $('#addRow').on( 'click', () => {
+    var newRow = timeEntryTable.row.add([]).draw(false);
+    var nextRowIdx = newRow.row().index();
+    console.log('nextRowIdx', nextRowIdx);
+  })
 
   console.log('timeEntryTable', timeEntryTable);
 
