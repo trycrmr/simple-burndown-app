@@ -5,7 +5,7 @@ $.DataTable = dt;
 
 $(document).ready(function() {
   
-  $('#datatable').DataTable({
+  var timeEntryTable = $('#datatable').DataTable({
     dom: "Bflrtip",
     responsive: true,
     ajax: {
@@ -25,5 +25,17 @@ $(document).ready(function() {
       { data: "type" }
     ]
   });
+
+  $('#datatable tbody').on( 'click', 'td', function () {
+    var cellData = timeEntryTable.cell( this ).data();
+    var idx = timeEntryTable.cell( this ).index().column;
+    var title = timeEntryTable.column( idx ).header();
+    var titleText = $(title).text();
+    console.log('title', title);
+    console.log('titleText', titleText);
+    console.log(`${titleText}: ${cellData}`);
+  } );
+
+  console.log('timeEntryTable', timeEntryTable);
 
 });
