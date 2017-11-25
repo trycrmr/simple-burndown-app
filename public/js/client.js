@@ -1,5 +1,6 @@
 var $ = require('jquery');
-var dt = require( 'datatables.net' );
+var dt = require('datatables.net');
+require('datatables.net-dt/css/jquery.dataTables.css');
 $.DataTable = dt;
 
 $(document).ready(function() {
